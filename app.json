@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "task-manager",
+    "name": "DUTY HUB",
     "slug": "task-manager",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/task-icon.png",
+    "icon": "./assets/images/appcover.png",
     "scheme": "taskmanager",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
