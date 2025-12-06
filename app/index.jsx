@@ -2,17 +2,27 @@ import { myCustomColors } from "@/constants";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+import backgroundImage from "../assets/images/background.png";
 
 export default function Index() {
   const router = useRouter();
-  
+
   function handlePress() {
     router.replace("/tasks");
   }
-  const imageSource = require("../assets/images/cover.png");
+  const imageSource = require("../assets/images/main-cover.png");
   return (
-    <View style={homePageStyles.mainView}>
+    <ImageBackground
+      style={homePageStyles.mainView}
+      source={backgroundImage}
+      resizeMode="repeat"
+    >
       <Image
         source={imageSource}
         style={homePageStyles.image}
@@ -28,7 +38,7 @@ export default function Index() {
           color={myCustomColors.lightOrange}
         />
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 }
 
